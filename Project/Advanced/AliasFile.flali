@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultAliasFile conditions="">
+    <Map Name="firstName" Link="/Content/zombieGuide/firstName.htm" Skin="/Project/Skins/cshSingleSkin.flskn" />
+    <Map Name="whatsNext" Link="/Content/zombieGuide/whatsNext.htm" Skin="/Project/Skins/cshSingleSkin.flskn" />
+    <Map Name="aboutZombies" Link="/Content/zombieGuide/aboutZombies.htm" Skin="/Project/Skins/WebsiteSkin.flskn" />
+</CatapultAliasFile>

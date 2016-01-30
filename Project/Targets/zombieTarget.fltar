@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/zombieApocalypse.fltoc"
+  MasterPage="/Content/Resources/MasterPages/MasterPage.flmsp"
+  Skin="/Project/Skins/topNavigation.flskn"
+  MasterStylesheet="/Content/Resources/Stylesheets/testStyles.css"
+  MenuSkin="/Project/Skins/menuContext.flskn"
+  ExcludeUnreferencedContent="true"
+  DefaultUrl="/Content/zombieGuide/aboutZombies.htm">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

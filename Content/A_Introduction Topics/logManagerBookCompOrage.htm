@@ -1,0 +1,1285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="34517.2" MadCap:lastWidth="1093">
+    <head>
+        <link href="../Resources/TableStyles/al_tablestyle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Log manager underline</h1>
+        <h2><a name="Before"></a>Before you begin</h2>
+        <h3><a name="System"></a>System requirements</h3>
+        <div class="indent">
+            <h4><a name="The"></a>The agent for Windows</h4>
+            <p>The following table describes the basic requirements to install the agent for Windows:</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU Utilization</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">1-10% depending on log volume</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">15 MB minimum</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">30 MB minimum</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported Operating Systems</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Windows Server (2012, 2008, 2003) Windows (8, 7,Vista) <br />Platform: 32-bit / 64-bit</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection support</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Windows, Flat File</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported environments</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Agent-only deployments with virtual and physical appliances, VPC, and Public Clouds</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Encryption</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">TLS Standard (SSL): 2048-bit key encryption, 256-bit AES bulk encryption</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection frequency</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Every five minutes (minimum)- logs collected and sent to<MadCap:variable name="ALVariables.Company" /> Cloud</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Host permissions</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyA-Column1-Body1">LocalSystem account has all the requisite permissions by default</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="The2"></a>The agent for Linux</h4>
+            <p>The following table describes the basic requirements to install the agent for Linux</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU Utilization</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">1-10% depending on log volume</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">15 MB minimum</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">500 MB minimum</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported Operating Systems</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Debian (Squeeze, Lenny), Ubuntu 7.x-12.x, CentOS 5.x-6.x, Red Hat 5.x-6.x<br />Platform:&#160;32-bit/64-bit</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection support</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Syslog, Flat-File</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported environments</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Agent-only deployments with virtual and physical appliances, VPC, and Public Clouds</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Encryption</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">TLS Standard (SSL): 2048-bit key encryption, 256-bit AES bulk encryption</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection frequency</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Every five minutes (minimum)- logs collected and sent to<MadCap:variable name="ALVariables.Company" /> Cloud</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Host permissions</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyA-Column1-Body1">No special permissions are required</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Virtual"></a>Virtual appliance</h4>
+            <p style="text-align: left;">The following table describes the basic requirements to install a virtual appliance:&#160;</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2 cores</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">1 GB - 50 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported virtual environment</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">VMware only</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection support </td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Syslog via agent or agent-less, Windows and flat-file  via agent only</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Encryption</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">TLS Standard (SSL): 2048-bit key encryption, 256-bit AES bulk encryption</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Note</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Not designed to run in a public cloud environment. Use agent-only deployments instead.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Remote"></a>Remote collector</h4>
+            <p style="text-align: left;">The following table describes the basic requirements to install a remote collector:</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2 cores</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">10 GB minimum</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Supported Operating Systems</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Windows and Linux</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection support</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Syslog only via port 1514</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Encryption</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">TLS Standard (SSL): 2048-bit key encryption, 256-bit AES bulk encryption</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection frequency</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Every five minutes (minimum)- logs collected and sent to <MadCap:variable name="ALVariables.Company" /> Cloud</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Host permissions</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">LocalSystem account has all the requisite permissions by default</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Physical"></a>Physical appliance</h4>
+            <p style="text-align: left;">The following table describes the basic requirements to install a physical appliance:</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Intel Xeon</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">4 GB DDR3</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">500 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Chassis</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">1U rack mounted</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Power</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">250W</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Log collection support</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Both agent-based and agent-less Windows, Syslog, flat-file  log collection</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Encryption</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyA-Column1-Body1">TLS Standard (SSL): 2048-bit key encryption, 256-bit AES bulk encryption</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Multi-te"></a>Multi-tenant appliance</h4>
+            <p style="text-align: left;">The following table describes the basic requirements to install a multi-tenant appliance:&#160;</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Customer Support </td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Physical appliance which can support up to 50 discrete virtual appliances</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">CPU</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Intel Xeon</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">RAM</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">4 GB DDR3</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">DISC</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">500 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Chassis</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">1U rack mounted</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Power</td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyD-Column1-Body1">250W</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Log collection support </td>
+                        <td style="text-align: left;" class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Both agent-based and agent-less Syslog, Agent-only Windows and flat-file  log collection</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Virtual2"></a>Virtual instance without the agent</h4>
+            <p>The following table describes basic requirements to install a virtual instance without the agent:</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col style="width: 116px;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <col style="width: 352px;" class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Components</th>
+                        <th style="text-align: left;" class="TableStyle-al_tablestyle-HeadD-Column1-Header1">System Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Virtual CPUs</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Storage</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">20 GB </td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Memory</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">2 GB</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Virtual Network Interface(s)</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">
+                            <ul>
+                                <td1 style="font-weight: bold;">Virtual network interface(s)</td1>
+                            </ul>
+                            <ul style="list-style-type: circle;">
+                                <td1>One interface with DHCP or manual IP addressing for management
+</td1>
+                                <br />
+                                <td1>If access to customer assets are restricted from management interface, an additional interface, internal to the customer environment with static access, is required for scanning
+</td1>
+                            </ul>
+                            <ul>
+                                <td1>VMWare OVF Tool (for more information see <a href="http://www.vmware.com/resources/techresources/1013">VMware OVF Tool</a>)</td1>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&#160;</p>
+        </div>
+        <h3><a name="Log"></a>Log Manager firewall rules</h3>
+        <div class="indent">
+            <h4><a name="Applianc"></a>Appliance inbound</h4>
+            <p>If you are using the US&#160;Data Center, use the following inbound firewall rules to allow the <MadCap:variable name="ALVariables.Company" /> US Data Center to communicate with your <MadCap:variable name="ALVariables.Company" /> appliances.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 110px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 66px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">204.110.218.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">22</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Secure Shell</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">204.110.219.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">22</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Secure Shell</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">0.0.0.0/0</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">80</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Virtual appliance claim only</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>If you are using the UK Data Center, use the following inbound firewall rules to allow the <MadCap:variable name="ALVariables.Company" /> UK Data Center to communicate with your <MadCap:variable name="ALVariables.Company" /> appliances.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 110px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 66px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">185.54.124.0/24</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">22</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Secure Shell</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">0.0.0.0/0</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">80</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Virtual appliance claim only</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>Appliance inbound port 80 is temporarily opened to claim virtual appliances. This rule does not apply to physical appliances. You can remove this rule after you claim the virtual appliance.</p>
+            </div>
+            <h4><a name="Applianc2"></a>Appliance outbound</h4>
+            <p>If you are using the US&#160;Data Center, use the following outbound firewall rules only on networks with restrictive outbound network traffic rules.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 109px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 67px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">204.110.218.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Data transport</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">204.110.219.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Data transport</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">8.8.8.8</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP/UDP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">53</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">DNS</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">8.8.4.4</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP/UDP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">53</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">DNS</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">0.0.0.0/0</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">80</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Appliance updates</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>If you are using the UK Data Center, use the following outbound firewall rules only on networks with restrictive outbound network traffic rules.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 109px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 67px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">185.54.124.0/24</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Data transport</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">8.8.8.8</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP/UDP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">53</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">DNS</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">8.8.4.4</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP/UDP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">53</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">DNS</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Appliance</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">0.0.0.0/0</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">80</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Appliance updates</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><a name="Agent"></a>Agent or remote collector outbound rules</h4>
+            <p>If you are using the US Data Center, you must add the following rule to allow agents or remote collectors to communicate with the <MadCap:variable name="ALVariables.Company" /> US&#160;Data Center.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 109px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 67px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">Source host</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">204.110.218.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1">Data transport</td>
+                    </tr>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Source host</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">204.110.219.96/27</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Data transport</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>If you are using the UK Data Center, you must add the following rule to allow agents or remote collectors to communicate with the <MadCap:variable name="ALVariables.Company" /> UK&#160;Data Center.</p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 164px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 146px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 109px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" style="width: 67px;" />
+                <col class="TableStyle-al_tablestyle-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-al_tablestyle-Head-Header1">
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Source</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Destination</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" style="text-align: left;">Protocol</th>
+                        <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1">Port</th>
+                        <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-al_tablestyle-Body-Body1">
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">Source host</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">185.54.124.0/24</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">TCP</td>
+                        <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1">443</td>
+                        <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1">Data transport</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3><a name="Determin"></a>Determine your appliance needs</h3>
+        <p MadCap:conditions=""><MadCap:variable name="ALVariables.LM_1" /> for <MadCap:variable name="ALVariables.AWS_1" /> is approved to operate on five instance options offered in the <MadCap:variable name="ALVariables.AWS" /> Marketplace. </p>
+        <p>Alert Logic Log Manager for AWS</p>
+        <p MadCap:conditions="">This option provides complete access to <MadCap:variable name="ALVariables.LM" /> in the <MadCap:variable name="ALVariables.ALUI_1" />. <MadCap:variable name="ALVariables.LM" />will collect, aggregate, and standardize logs for threat identification and security visibility for your entire <MadCap:variable name="ALVariables.AWS" /> and corresponding environments. This option also includes 90-day data retention.</p>
+        <p MadCap:conditions="">Each <MadCap:variable name="ALVariables.LM" /> for <MadCap:variable name="ALVariables.AWS" /> EC2 instance includes a daily log volume sum. The daily log volume is the total volume of uncompressed log data  that <MadCap:variable name="ALVariables.Company" /> receives within a 24-hour period for every enabled log source, measured from midnight to midnight UTC.</p>
+        <p>Each <MadCap:variable name="ALVariables.LM" /> for <MadCap:variable name="ALVariables.AWS" />&#160;EC2 instance includes a maximum daily log volume entitlement. Daily log volume is the total aggregated volume (uncompressed), of all enabled log sources, received by <MadCap:variable name="ALVariables.Company" /> within a 24-hour period, measured from midnight to midnight UTC.  </p>
+        <p>Select the appropriate EC2 Instance based on the anticipated amount of log data you want to collect with <MadCap:variable name="ALVariables.LM" /> each day.</p>
+        <table style="caption-side: top; mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css'); margin-left: 0; margin-right: auto;" class="TableStyle-al_tablestyle" cellspacing="0">
+            <col style="width: 230px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 207px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 151px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-al_tablestyle-Head-Header1">
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Instance name</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Daily log volume</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Alert Logic</th>
+                    <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" MadCap:conditions="Primary.Draft Content">Amazon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Micro (t1.micro)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">
+                        <p MadCap:conditions="">120 MB</p>
+                    </td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.15 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.02 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Standard Small (m1.small)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">400 MB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.32 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.044 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">M3 Medium (m3.medium)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">1 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.48 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.07 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">C3 Large (c3.xlarge)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">4 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.72 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.105 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">M3 Large (m3.large)</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">10 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">$1.07 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.14 per hour</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> The above prices do not include <MadCap:variable name="ALVariables.AWS" />&#160;data transfer fees for exporting log data. </p>
+        </div>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> You should verify the most current <MadCap:variable name="ALVariables.AWS" /> EC2 pricing for the supported available instance types. For the latest pricing, see the <a href="https://aws.amazon.com/marketplace/pp/B00LAJJ2MW/ref=portal_asin_url" target="_blank">Alert Logic Log Manager product listing in Amazon Marketplace</a>.</p>
+        </div>
+        <p>Alert Logic Log Manager for PCI-DSS 3.0 Compliance in AWS </p>
+        <p MadCap:conditions="">This option offers a fully managed security and compliance log management solution for PCI-DSS 3.0 compliance.</p>
+        <p MadCap:conditions="">Included is one year of log data retention and includes <MadCap:variable name="ALVariables.Company" /><MadCap:variable name="ALVariables.LogReview" /> service.</p>
+        <p>Each <MadCap:variable name="ALVariables.LM" /> for <MadCap:variable name="ALVariables.AWS" />&#160;EC2 instance includes a maximum daily log volume entitlement. Daily log volume is the total aggregated volume (uncompressed), of all enabled log sources, received by <MadCap:variable name="ALVariables.Company" /> within a 24-hour period, measured from midnight to midnight UTC.  </p>
+        <p>Select the appropriate EC2 Instance based on the anticipated amount of log data you want to collect with <MadCap:variable name="ALVariables.LM" /> each day.</p>
+        <table style="caption-side: top; mc-table-style: url('../../../../../../../../Alert Logic Help Project/Content/Resources/TableStyles/al_tablestyle.css'); margin-left: 0; margin-right: auto;" class="TableStyle-al_tablestyle" cellspacing="0">
+            <col style="width: 231px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 210px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 151px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-al_tablestyle-Head-Header1">
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Instance name</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Daily log volume</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Alert Logic</th>
+                    <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" MadCap:conditions="Primary.Draft Content">Amazon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Micro (t1.micro)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1">
+                        <p MadCap:conditions="">120 MB</p>
+                    </td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.90 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.02 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Standard Small (m1.small)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">400 MB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$1.47 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.44 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">M3 Medium (m3.medium)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">1 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$2.47 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.07 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">C3 Large (c3.xlarge)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">4 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">$3.40 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.105 per hour</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">M3 Large (m3.large)</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">10 GB</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">$4.87 per hour</td>
+                    <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1" MadCap:conditions="Primary.Draft Content">$0.14 per hour</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p MadCap:conditions=""> The above prices do not include <MadCap:variable name="ALVariables.AWS" />&#160;data transfer fees for exporting log data. </p>
+        </div>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> You should verify the most current <MadCap:variable name="ALVariables.AWS" /> EC2 pricing for the supported available instance types. For the latest pricing, visit the <a href="https://aws.amazon.com/marketplace/pp/B00LAJJ4FW/ref=portal_asin_url" target="_blank">Alert Logic Log Manager product listing in Amazon Marketplace</a>.</p>
+        </div>
+        <p><MadCap:variable name="ALVariables.LogReview" /> utilizes <MadCap:variable name="ALVariables.LM" /> to satisfy the log review and analysis component of our security best practices.  Each day, <MadCap:variable name="ALVariables.Company" /> System Security Analysts will use <MadCap:variable name="ALVariables.LM" /> to analyze event log data, track and escalate incidents, and send notifications that pertain to the systems that generate these problematic logs. <MadCap:variable name="ALVariables.Company" /> utilizes standards such as PCI-DSS to provide a prescriptive framework to generate reports.  These reports address specific requirements within the standards.</p>
+        <p MadCap:conditions="">The <MadCap:variable name="ALVariables.LogReview" /> service is designed to meet the following compliance mandates:</p>
+        <ul>
+            <li MadCap:conditions="">Review of daily logs</li>
+            <li MadCap:conditions="">Analyze event log data for potential security incidents</li>
+            <li MadCap:conditions="">Send notification for incidents that warrant further investigation</li>
+            <li MadCap:conditions="">Create an audit trail for auditors and regulators </li>
+        </ul>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p MadCap:conditions=""> Amazon CloudTrail logs are not included in <MadCap:variable name="ALVariables.Company" /> Daily <MadCap:variable name="ALVariables.LogReview" /> service; however, <MadCap:variable name="ALVariables.LM" /> CloudTrail reports are available for you to use within the <MadCap:variable name="ALVariables.ALUI_1" />.</p>
+        </div>
+        <h3 MadCap:conditions="Primary.Draft Content"><a name="Service"></a>Service level commitment </h3>
+        <p MadCap:conditions="Primary.Draft Content">Every 24 hours, a System Security Analyst will review the logs from the previous day and escalate any associated incidents in accordance with your escalation process.</p>
+        <h3 MadCap:conditions="Primary.Draft Content"><a name="Daily"></a>Daily review actions</h3>
+        <p MadCap:conditions="Primary.Draft Content">If a security or compliance incident is identified, a System Security Analyst will contact you with the details of the alert and offer any recommendations.  The analyst will maintain a full LogReview audit trail which is accessible through the Alert Logic User Interface for future audit reporting.  The analysis will include only logs provided by active and configured hosts.  </p>
+        <h3 class="pagebreak" MadCap:conditions="Primary.Draft Content"><a name="Audit"></a>Audit trail</h3>
+        <p MadCap:conditions="Primary.Draft Content">For each daily LogReview task, a case is created and stored in the Log Manager section of the Alert Logic User Interface. You will be able to view the following content for any date covered within the LogReview scope: </p>
+        <ul>
+            <li>
+                <p MadCap:conditions="Primary.Draft Content">Report results</p>
+            </li>
+            <li>
+                <p MadCap:conditions="Primary.Draft Content">Analyst comments</p>
+            </li>
+            <li>
+                <p MadCap:conditions="Primary.Draft Content">Analyst actions taken (if any)</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="Primary.Draft Content">Reports can be used to prove to an auditor that monitoring is taking place. This audit trail is maintained for a minimum of 12 rolling months.</p>
+        <h3 class="pagebreak" MadCap:conditions=""><a name="Complian"></a>Compliance coverage</h3>
+        <p MadCap:conditions="">The following chart explains how <MadCap:variable name="ALVariables.LM" /> meets specific security mandates:</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/al_tablestyle.css');" class="TableStyle-al_tablestyle" cellspacing="0">
+            <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 206px;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-al_tablestyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-al_tablestyle-Head-Header1">
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">Action</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">HIPAA</th>
+                    <th class="TableStyle-al_tablestyle-HeadE-Column1-Header1" MadCap:conditions="Primary.Draft Content">PCI</th>
+                    <th class="TableStyle-al_tablestyle-HeadD-Column1-Header1" MadCap:conditions="Primary.Draft Content">ISO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Provide a policy for LogReview</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">164.308(a)(1)(ii)(D), 4.1.7 Bullet 1</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.6.a</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">8.2.2(2)(5), 10.5.1 </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Provide a defined process for LogReview</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">4.1.9 Bullet 1,        CSR 1.6.1(4)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.6.a,              10.2, 10.3</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">8.1.5(6) , 8.2.2(2)(5) </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Review logs within a specified time period</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">CSR 2.1.12 , CSR 10.2.3</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.6</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">4.2.3(b), </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Review logs within a specified time period</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">CSR 3.1.3</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">&#160;</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.5.1 </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Supervisors must review abnormalities</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">CSR 4.2.2</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">&#160;</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.5.1 </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Access events</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">164.308(a)(6)(1),  CSR 7.3.6</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.2.4</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.10.2, 9.2 , 10.3.4 </td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Change events</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">164.312(b)  </td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.2.2,              10.2.7</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.10.2</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">Network and Wireless logging</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">CSR 10.10.5(10)</td>
+                    <td class="TableStyle-al_tablestyle-BodyE-Column1-Body1" MadCap:conditions="Primary.Draft Content">3.3.1.c</td>
+                    <td class="TableStyle-al_tablestyle-BodyD-Column1-Body1" MadCap:conditions="Primary.Draft Content">&#160;</td>
+                </tr>
+                <tr class="TableStyle-al_tablestyle-Body-Body1">
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">Maintain logs and audit trail for extended durations</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">&#160;</td>
+                    <td class="TableStyle-al_tablestyle-BodyB-Column1-Body1" MadCap:conditions="Primary.Draft Content">10.7</td>
+                    <td class="TableStyle-al_tablestyle-BodyA-Column1-Body1" MadCap:conditions="Primary.Draft Content">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="">The <MadCap:variable name="ALVariables.Company" /> homepage offers more information about <a href="https://www.alertlogic.com/products-services/logreview/" target="_blank">LogReview</a>.</p>
+        <h2><a name="Step"></a>1 Download a virtual appliance</h2>
+        <ol>
+            <li MadCap:conditions="">At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>. </li>
+            <li MadCap:conditions="">In the left navigation window, click <b>Support</b>.</li>
+            <li MadCap:conditions="">From the menu bar, click <b>Downloads</b>. </li>
+            <li MadCap:conditions="">Click <b>Virtual appliances</b>.</li>
+            <li MadCap:conditions="">Download the virtual appliance and follow the on-screen instructions. </li>
+            <li MadCap:conditions="">Locate the <b>Unique Registration Key</b>. Copy your unique registration key. You will need this key to install the agent.</li>
+        </ol>
+        <h2><a name="Step2"></a>2 Install virtual appliance</h2>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p>If you have experience with VMWare management tools and virtual machine installation, you can install <MadCap:variable name="ALVariables.ALUI_1" />as a virtual appliance into your existing VMWare virtualized infrastructure. </p>
+            <p>The instructions below are not a complete guide to configure vSphere or virtual data centers. VMWare offers <a href="http://www.vmware.com/support/" target="_blank">more information regarding vSphere</a>.          </p>
+        </div>
+        <p style="font-weight: bold;">To install a  virtual appliance:</p>
+        <ol>
+            <li>Save the virtual appliance image to your target machine. </li>
+            <li>Import the file into VSphere. <b>Before you import, consider the following:</b><ul><li>A thin-provisioned appliance allocates 1 GB of disk to boot and can expand to 20 GB as the appliance uses data</li><li>A thick-provisioned appliance allocates 30 GB when the appliance is created</li></ul></li>
+            <li>Power on the virtual machine.</li>
+            <li>Configure your IP&#160;address. To assign a manual address, log into a serial console with the following credentials: setup/7739521</li>
+            <li>In your browser, type: <b>http://&lt;YOURVIRTUALAPPLIANCEIPADDRESS&gt;</b></li>
+            <li>In <b>Registration Key</b>, paste your unique registration key. </li>
+            <li>Click <b>Claim appliance</b>. </li>
+            <li>Direct all syslogs to the virtual appliance on inbound port 514.</li>
+        </ol>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p>This deployment method only allows for syslog collection.</p>
+        </div>
+        <h2><a name="Step3"></a>3 Download the agent</h2>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation window, click <b>Support</b>.<br /></li>
+            <li>From the menu bar, click <b>Downloads</b>.</li>
+            <li>Download the appropriate agent and follow the on-screen instructions.<ul><li>Window users click the agent for Windows, then select the desired agent. </li><li>Linux users click the agent for Linux. Linux users can select either Debian-based agent installers or RPM-based installers. Both installers are available in a 32-bit or 64-bit format.<br /></li></ul></li>
+            <li>Locate the <b>Unique Registration Key</b> from the <b>Downloads</b> screen. Copy your unique registration key. You will need this key to install the agent. </li>
+        </ol>
+        <h2><a name="Step4"></a>4 Install the agent</h2>
+        <h3 class="optional"><a name="Option"></a>Install the agent for Windows</h3>
+        <div class="indent">
+            <h4><a name="1."></a>GUI installation (host mode only)</h4>
+            <ol>
+                <li>Run the MSI package.</li>
+            </ol>
+            <p>
+                <img src="../Resources/Images/agentSetup.png" />
+            </p>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Docs_al only"><b style="font-weight: normal; font-style: normal;">If you have set up a NAT or virtual appliance and you want to use it as a single point of egress</b><b>,</b> enter the corresponding host name or IP address and port.</li>
+                <li> In <b>Provisioning API Key</b>, paste your <b>Unique Registration Key</b>.<br /></li>
+                <li>In <b>Provision</b>, select <b>During Setup</b>. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> You can also select to provision after the agent setup is complete. This option is commonly used when the agent must be installed, but not provisioned, so that a virtual machine image can be copied without the provisioned agent. </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Click <b>Install</b>.</li>
+                <li>Verify that the agent has registered with the <MadCap:variable name="ALVariables.ALUI_1" />. To do so, in the left navigation, under <b>Collection</b>, click <b>Sources</b>, and then search for the agent. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> The agent registration may take several minutes.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Cloud_docs only">(Optional) Capture an image</li>
+            </ol>
+            <p MadCap:conditions="Primary.Cloud_docs only"><b>Note</b> You can capture an image of the virtual machine that contains the installed <MadCap:variable name="ALVariables.LM" /> agent. See <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Cloud Partner/Azure/Log Manager/lmAzureIaas/Capture an image.htm">Capture an image</MadCap:xref>.</p>
+            <p MadCap:conditions="Primary.Docs_al only"><b>See also</b><a href="http://www.youtube.com/watch?v=1OB57vpNvUk&amp;list=PLs4m-8xwg9MLvUh41kTdtEhHY68swwuUO" target="_blank"><img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/play icon.PNG" style="width: 26px;height: 24px;mc-thumbnail-max-height: 48px;" /> Video: Installing Windows Agent</a>
+            </p>
+            <p MadCap:conditions="Primary.Cloud_docs only"><b>See also</b><a href="http://www.youtube.com/watch?v=h1Zdx_Cfkgk&amp;feature=c4-overview&amp;list=UULCarytLB9nbwRBjE0bqs9w" target="_blank"> Video: Log Manager in Azure- Installing Windows Agent </a>
+            </p>
+            <h4><a name="2."></a>Command prompt host mode installation</h4>
+            <p>Use this installation when there is one dedicated virtual server.&#160;With this installation, <MadCap:variable name="ALVariables.LM" /> displays log data collected from the installed host agent under one associated source in the <MadCap:variable name="ALVariables.ALUI_1" />. You cannot use the agent in host mode to capture an image of the virtual machine. </p>
+            <p style="font-weight: bold;">To install a the agent in host mode via the command prompt:</p>
+            <ol>
+                <li>Copy the MSI file to the target machine.</li>
+                <li>Use the following command to install the agent in host agent mode:<br /><p><kbd>msiexec /i [path to MSI&#160;file] prov_only=host prov_key=[unique registration key]</kbd></p><div class="note"><img src="../Resources/Images/utilityNote2.png" class="utilityDiv" /><p><b>To understand the above command:&#160;</b></p><ul><li><kbd>/i</kbd> installs the agent normally.</li><li><kbd>prov_only=[host]</kbd> sets the agent as a role type, provisions the agent, and runs the agent to start collection.</li><li><kbd>[prov_key=[unique registration key]</kbd> is your Unique Registration Key.</li></ul><p>&#160;</p></div><div class="example"><img src="../Resources/Images/utilityExample2.png" class="utilityDiv" /><p>&#160;</p><p><span style="font-family: monospace;">msiexec /i c:\downloads\</span><span style="font-family: monospace;"><MadCap:variable name="ALVariables.AL_AgentName(code)" />-1.0.33.msi prov_only=host prov_key=</span><MadCap:variable name="ALVariables.URegKey" style="font-family: monospace;" /><![CDATA[
+            ]]></p></div><ul MadCap:conditions="Primary.Draft Content"><li><b>/i</b> installs the agent normally</li><li><b>prov_only=[host]</b> sets the agent as a host type, provisions the agent, and runs the agent to start collection.</li><li><b>[prov_key=[unique registration key]</b> is your unique registration key</li><li>Command prompt example: <span style="font-family: monospace;">msiexec /i c:\downloads\</span><span style="font-family: monospace;"><MadCap:variable name="ALVariables.AL_AgentName(code)" />-1.0.33.msi prov_only=host prov_key=</span><MadCap:variable name="ALVariables.URegKey" style="font-family: monospace;" /></li></ul></li>
+                <li>Verify that the agent has registered with the <MadCap:variable name="ALVariables.ALUI" />. To do so, in the left navigation window, under <b>Collection</b>, click <b>Sources</b>, and then search for your agent. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>Agent registration may take several minutes.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>(Optional) Enable flat-file collection. <br /><b>Note</b> To enable flat-file collection in <MadCap:variable name="ALVariables.LM" />, see <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Docs/Log Manager/About collection/Sources/overviewCreateLogSource.htm">Create a log source</MadCap:xref>. </li>
+            </ol>
+            <h4><a name="3."></a>Command prompt autoscaling mode installation</h4>
+            <p>Use this installation when a number of virtual servers perform the same function. With this installation, <MadCap:variable name="ALVariables.LM" /> displays log data collected from the agent under one associated source in the <MadCap:variable name="ALVariables.ALUI" />. Use the agent in autoscaling mode for load balancing. When you install the agent in autoscaling mode, you must install the agent without starting the agent. The image capture works only if the  agent is installed and has never started autoscaling. When the agent starts autoscaling for the first time, it registers itself with <MadCap:variable name="ALVariables.Company" />. If images are captured using the agent already autoscaling, there will be multiple agents with the same registration details that will report to <MadCap:variable name="ALVariables.Company" />.</p>
+            <p><b>To install the agent in autoscaling mode via the command prompt:</b>
+            </p>
+            <ol>
+                <li>Copy the MSI file to the target machine. </li>
+                <li>Use the following command to install the agent in autoscaling mode:<br /><p><kbd>msiexec /i [path to MSI&#160;file] install_only=1 prov_only=role prov_key=[unique registration key]</kbd></p><div class="note"><img src="../Resources/Images/utilityNote2.png" class="utilityDiv" /><p><b>To understand the above command:&#160;</b></p><ul><li><kbd>/i</kbd> installs the agent normally.</li><li><kbd>prov_only=[role]</kbd>sets the agent as a host type, provisions the agent, and runs the agent to start collection.</li><li><kbd>[prov_key=[unique registration key]</kbd> is your unique registration key.</li></ul></div><ul><li MadCap:conditions="Primary.Draft Content"><b>/i</b> installs the agent normally</li><li MadCap:conditions="Primary.Draft Content"><b>[install_only=1]</b> installs the agent without running it</li><li MadCap:conditions="Primary.Draft Content"><b>prov_only=[role]</b> sets the agent as a host type, provisions the agent, and runs the agent to start collection.</li><li MadCap:conditions="Primary.Draft Content"><b>[prov_key=[unique registration key]</b> is your unique registration key</li></ul><div class="example"><img src="../Resources/Images/utilityExample2.png" class="utilityDiv" /><p>&#160;</p><p><kbd>msiexec /i c:\downloads\</kbd><kbd><MadCap:variable name="ALVariables.AL_AgentName(code)" />-1.0.33.msi install_only=1 prov_only=role prov_key=</kbd><MadCap:variable name="ALVariables.URegKey" style="font-family: monospace;" /></p></div><ul MadCap:conditions="Primary.Draft Content"><li>Command line example: <kbd>msiexec /i c:\downloads\</kbd><kbd><MadCap:variable name="ALVariables.AL_AgentName(code)" />-1.0.33.msi install_only=1 prov_only=role prov_key=</kbd><MadCap:variable name="ALVariables.URegKey" style="font-family: monospace;" /></li></ul></li>
+                <li>(Optional) <b style="font-weight: normal; font-style: normal;">If you have set up a NAT or virtual appliance and you want to use it as a single point of egress,</b> enter the corresponding host name or IP address or port via the following command prompt parameters:<ul><li><kbd>sensor_host=[host]</kbd> indicates the IP&#160;address where the agent should forward logs.</li><li><kbd>sensor_port=[port]</kbd> indicates the TCP port where the agent should connect.</li></ul><p>For other command prompts parameters, see <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Docs/Install and Configure/Alert Logic Log Manager/optionalWindowsInstallCommands.htm">Optional Windows command-prompt installation parameters</MadCap:xref>.</p></li>
+                <li>Verify that the agent has registered with the <MadCap:variable name="ALVariables.ALUI" />. To do so, in the left navigation window, under <b>Collection</b>, click <b>Sources</b>, and then search for the agent. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>The agent registration may take several minutes.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Cloud_docs only">(Optional) Capture an image.</li>
+            </ol>
+            <p MadCap:conditions="Primary.Cloud_docs only"><b>Note</b> You can capture an image of the virtual machine that contains the installed agent. See <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Cloud Partner/Azure/Log Manager/lmAzureIaas/Capture an image.htm">Capture an image</MadCap:xref>.</p>
+        </div>
+        <h3 class="optional"><a name="Option2"></a>Install the Agent for Linux</h3>
+        <div class="indent">
+            <h4><a name="1.2"></a>Install the agent on RPM-based distributions</h4>
+            <ol>
+                <li>Copy RPM package to the target machine.</li>
+                <li>If you run SELinux, you must first run the following command:&#160;<kbd> semanage port -a -t syslogd_port_t -p tcp 1514</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> If the semanage command is not present in your system, you can install the  policycoreutils-python package to obtain the semanage command. <MadCap:variable name="ALVariables.Company" /> recommends that you consult with your system administrator to verify. </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Run the following command:<br /><kbd> rpm -i <MadCap:variable name="ALVariables.AL_AgentName(code)" />-&lt;version&gt;*.rpm</kbd></li>
+                <li>Run one of the following commands based on your preference:<ul><li>To configure the agent in <b>host</b> mode, run:<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt; --inst-type host</kbd></li><li>To configure the agent in <b>auto scaling</b> mode, run:<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt; --inst-type role</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> For more information about agent mode types, see <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Docs/Install and Configure/Alert Logic Log Manager/Host agents and role agents.htm">About the Alert Logic agent host mode and auto scaling mode</MadCap:xref></p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Run the following command:&#160;<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> start</kbd></li>
+            </ol>
+            <div class="caution">
+                <img src="../Resources/Images/utilityCaution2.png" class="utilityDiv" />
+                <p>Do not run this command if you want to capture the image of a virtual machine.             </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>If you use an rsyslog daemon, add the following line to rsyslog.conf: <br /><kbd>*.* @@127.0.0.1:1514;RSYSLOG_FileFormat</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>If you use a syslog-ng daemon, add the following lines to syslog-ng.conf:<ul><li><kbd>destination d_alertlogic {tcp("localhost" port(1514));};</kbd></li><li><kbd>log { source(s_src); destination(d_alertlogic); };</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Restart the syslog daemon. </li>
+                <li>Verify that the agent has registered with the <MadCap:variable name="ALVariables.ALUI_1" />. To do so, in the left navigation window, under <b>Collection</b>, click <b>Sources</b>, and then search for the agent. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> The agent registration may take several minutes.<span class="div"><![CDATA[  ]]></span></p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>(Optional) Capture an image. </li>
+            </ol>
+            <p><b>Note</b> You can capture an image of the virtual machine that contains the installed agent. See <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Cloud Partner/Azure/Log Manager/lmAzureIaas/Capture an image.htm">Capture an image</MadCap:xref>.</p>
+            <h4><a name="2.2"></a>Install the agent on Debian-based distributions</h4>
+            <ol>
+                <li>Copy Debian package to the target machine</li>
+                <li>If you run SELinux, you must first run the following command:&#160;<kbd> semanage port -a -t syslogd_port_t -p tcp 1514</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> If the semanage command is not present in your system, you can install the  policycoreutils-python package to obtain the semanage command. Alert Logic recommends that you consult with your system administrator to verify. </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Run the following command:<br /><kbd> dpkg -i <MadCap:variable name="ALVariables.AL_AgentName(code)" />-&lt;version&gt;*.deb</kbd></li>
+                <li>Run one of the following commands based on your preference:<ul><li>To configure the agent in <b>host</b> mode, run:<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt; --inst-type &lt;host&gt;</kbd></li><li>To configure the agent in <b>auto scaling</b> mode, run:<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt; --inst-type &lt;role&gt;</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>For more information about agent types, see <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Docs/Install and Configure/Alert Logic Log Manager/Host agents and role agents.htm">About the Alert Logic agent host mode and auto scaling mode</MadCap:xref></p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Run the following command:&#160;<br /><kbd> /etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> start</kbd></li>
+            </ol>
+            <div class="caution">
+                <img src="../Resources/Images/utilityCaution2.png" class="utilityDiv" />
+                <p>Do not run this command if you want to capture the image of a virtual machine.            </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>If you use an rsyslog daemon, add the following line to rsyslog.conf:<br /><kbd>*.*  @@127.0.0.1:1514;RSYSLOG_FileFormat</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>If you use a syslog-ng daemon,  add the following lines to syslog-ng.conf:<ul><li><kbd>destination d_alertlogic {tcp("localhost" port(1514));};</kbd></li><li><kbd>log { source(s_src); destination(d_alertlogic); };</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li>Restart the syslog daemon. </li>
+                <li>Verify that the agent has registered with the <MadCap:variable name="ALVariables.ALUI_1" />. To do so, in the left navigation window, under <b>Collection</b>, click <b>Sources</b>, and then search for your agent. </li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> Agent registration may take several minutes.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Cloud_docs only">(Optional) Capture an image. </li>
+            </ol>
+            <p MadCap:conditions="Primary.Cloud_docs only"><b>Note</b> You can capture an image of the virtual machine that contains the installed Log Manager agent. See <MadCap:xref href="../../../../../../../../Alert Logic Help Project/Content/Cloud Partner/Azure/Log Manager/lmAzureIaas/Capture an image.htm">Capture an image</MadCap:xref>.</p>
+        </div>
+        <h3 class="optional"><a name="Option3"></a>Install the agent for Linux in host mode</h3>
+        <div class="indent">
+            <h4><a name="1.3"></a>Install the agent on RPM-based distributions</h4>
+            <ol>
+                <li MadCap:conditions="Primary.Docs_al only">Copy RPM package to the target machine.</li>
+                <li MadCap:conditions="Primary.Docs_al only">If you run SELinux, you must first run the following command:&#160;<kbd>semanage port -a -t syslogd_port_t -p tcp 1514</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> If the semanage command is not present in your system, you can install the  policycoreutils-python package to obtain the semanage command. Alert Logic recommends that you consult with your system administrator to verify. </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Docs_al only">Run the following commands:<ol style="list-style-type: lower-roman;"><li MadCap:conditions="Primary.Docs_al only"><kbd> rpm -i <MadCap:variable name="ALVariables.AL_AgentName(code)" />-&lt;version&gt;*.rpm</kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> configure --host &lt;LOGMANAGERVIRTUALAPPLIANCEIP&gt;</kbd><![CDATA[  ]]></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt; </kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> start</kbd></li></ol></li>
+                <li MadCap:conditions="Primary.Docs_al only">If you use an rsyslog daemon, add the following line to rsyslog.conf: <kbd>*.* @@127.0.0.1:1514;RSYSLOG_FileFormat</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Docs_al only">If you use a syslog-ng daemon,   add the following lines to syslog-ng.conf:<ul><li MadCap:conditions="Primary.Docs_al only"><kbd>destination d_alertlogic {tcp("localhost" port(1514));};</kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>log { source(s_src); destination(d_alertlogic); };</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <h4><a name="2.3"></a>Install the agent on Debian-based distributions</h4>
+            <ol>
+                <li MadCap:conditions="Primary.Docs_al only">Copy Debian package to the target machine.</li>
+                <li MadCap:conditions="Primary.Docs_al only">If you run SELinux, you must first run the following command:&#160;<kbd>semanage port -a -t syslogd_port_t -p tcp 1514</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> If the semanage command is not present in your system, you can install the  policycoreutils-python package to obtain the semanage command. Alert Logic recommends that you consult with your system administrator to verify. </p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Docs_al only">Run the following commands:<ul><li MadCap:conditions="Primary.Docs_al only"><kbd> dpkg -i<MadCap:variable name="ALVariables.AL_AgentName(code)" />-&lt;version&gt;*.deb</kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> configure --host &lt;LOGMANAGERVIRTUALAPPLIANCEIP&gt;</kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> provision --key &lt;UNIQUEREGISTRATIONKEY&gt;</kbd></li><li MadCap:conditions="Primary.Docs_al only"><kbd>/etc/init.d/<MadCap:variable name="ALVariables.AL_AgentName(code)" /> start</kbd></li></ul></li>
+                <li MadCap:conditions="Primary.Docs_al only">If you use an rsyslog daemon,   add the following line to rsyslog.conf: <kbd>*.* @@127.0.0.1:1514;RSYSLOG_FileFormat</kbd></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+            <ol MadCap:continue="true">
+                <li MadCap:conditions="Primary.Docs_al only">If you use a syslog-ng daemon,  add the following lines to syslog-ng.conf:<ul><li><kbd>destination d_alertlogic {tcp("localhost" port(1514));};</kbd></li><li><kbd>log { source(s_src); destination(d_alertlogic); };</kbd></li></ul></li>
+            </ol>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p> This configuration will direct your local syslog to the agent on TCP port 1514.</p>
+            </div>
+        </div>
+        <h2><a name="Step5"></a>5 Configure collection source</h2>
+        <h3 class="optional"><a name="Option4"></a> Create a Windows Eventlog source</h3>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" /> from the drop-down menu, select <MadCap:variable name="ALVariables.LM" style="font-weight: bold;" />.</li>
+            <li>In the left navigation window, under <b>Collection</b>, click <b>Sources</b>.</li>
+            <li>In the   log source table, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Source</b>. </li>
+            <li>From <b>Source Log Type</b>, select <b>Windows Event Log</b>. </li>
+            <li>In the<b>Source Name</b> field, type a descriptive name.</li>
+            <li>In <b>Collector</b>, select an appliance. </li>
+            <li>In <b>IP Address</b>, type the IP address of the appliance.  </li>
+            <li>In <b>Enable Collection</b>, keep the default selection: <b>Enabled</b>.</li>
+            <li>In <b>Collection Policy</b>, select <b>Use an existing Policy</b>, and from <b>Existing policy</b>, select a policy.	</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>In <b>Collection Alerts</b>, click the field and select one or multiple alert options.</li>
+            <li> From <b>Time Zone</b>, select a time zone.</li>
+            <li>In the <b>Tags</b> field, type an easily filtered tag.</li>
+            <li>Click <b>Save</b>. </li>
+        </ol>
+        <h3 class="optional"><a name="Option5"></a>Create a flat file collection source</h3>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Collection</b>, click <b>Sources</b>.</li>
+            <li>In the table of log hosts, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Source</b>. </li>
+            <li>From <b>Source Log Type</b>, select <b>Flat-File Collection</b>.</li>
+            <li>In <b>Source Name</b>, enter a descriptive name.</li>
+            <li>Select a collection method:<ul><li>To collect via an appliance, select <b>Use an Appliance</b>. Next, select a collector and type the corresponding IP&#160;address. </li><li>To collect via an agent, select <b>Use an Agent</b>. Next, from <b>Existing Host</b>, select the corresponding IP address.</li></ul></li>
+            <li>In <b>Enable Collection</b>, keep the default selection: <b>Enabled</b>.</li>
+            <li>
+                <p>In <b>Collection Policy</b>, select <b>Use an existing Policy</b>, and from <b>Existing policy</b>, select a policy. </p>
+            </li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>In <b>Collection Alerts</b>, click the field and select one or multiple alert options. </li>
+            <li>From <b>Time Zone</b>, select a time zone.</li>
+            <li>In the <b>Tags</b> field, type an easily filtered tag. </li>
+            <li>Click <b>Save</b>. </li>
+        </ol>
+        <h2><a name="Step6"></a>6 Configure collection policies</h2>
+        <h3 class="optional"><a name="Option6"></a>Create flat-file policy</h3>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation window, under <b>Policies</b>, click <b>Flat File</b>.</li>
+            <li>In the table of collection policies, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New FFC Policy</b>.</li>
+            <li>In <b>Flat-File Policy Name</b>, type  a descriptive policy.</li>
+            <li>In the <b>Source File Path</b> field, type the path </li>
+            <div class="note">
+                <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+                <p>To use an agent for collection, specify the local file system path to the log files. Otherwise, specify the network share path to the log files.
+            </p>
+            </div>
+            <li>In the <b>File Name or Pattern</b> field, type the file name or date pattern of the flat-file log messages.</li>
+            <div class="example">
+                <img src="../Resources/Images/utilityExample2.png" class="utilityDiv" />
+                <p>htaccess.* is a file name with a pattern. The <kbd>*</kbd> represents the time stamp of the flat-file log. Indicate the specific time format for this flat-file. <MadCap:variable name="ALVariables.LM" /> accepts a variety of date formats.</p>
+            </div>
+            <li>From <b>File Name Rotation Scheme</b>, select a file name rotation scheme. The format must match the format of your flat-file log messages.<div class="note"><img src="../Resources/Images/utilityNote2.png" class="utilityDiv" /><p>The default, <b>Auto-Detect</b> identifies many rotation schemes. <MadCap:variable name="ALVariables.Company" /> recommends you specify the rotation scheme format of your flat-file log messages. If you are unsure of the  format or do not find the specific format  from the drop-down menu, select <b>Auto-Detect</b>.     </p></div></li>
+            <li>In <b>Multiline Handling</b>, select a multiline handling option:<ul><li>If your flat-file log messages contain single lines, keep the selection: <b>File contains single line log messages</b>.</li></ul><ul MadCap:continue="true"><li>If your flat-file log messages contain multiple lines, select <b>File contains log messages with multiple lines</b>. Also, select and enter a configuration.<ul MadCap:continue="true"><li>If the length of your log messages is consistent: <ul MadCap:continue="true"><li>Keep the selection: <b>Each log message spans a fixed number of lines</b>, and then in <b>Number of lines</b>, type the number of lines.</li></ul></li><li>If the length of your log messages is not consistent:<ul MadCap:continue="true"><li> Select <b>Each log message follows a known pattern</b>, select the appropriate <b>Pattern application</b>, and then type the <b>Pattern</b> that takes place in the log message. Next, select <b>Regular expression</b> to use a Perl Compatible Regular Expression (PCRE).       </li></ul></li></ul></li></ul></li>
+            <li>In <b>Timestamp Rule</b>, select a timestamp rule option:</li>
+            <ul MadCap:continue="true">
+                <li>To use the timestamp from the collector, keep the  selection: <b>Set message time as collect time</b>.</li>
+                <li>To use an existing timestamp, select <b>Parse times from messages using a pre-defined timestamp format</b>. Next, select a format from <b>Format a date string</b>.</li>
+                <li>To use a custom timestamp, select <b>Parse times from messages using a custom timestamp format</b>. Next, enter a format for the date string in the expanded configuration area.<ul MadCap:continue="true"><li>In the <b>Format of date string</b> field, type a format for the date string, and follow the on screen instructions, and select <b>Check format</b> to validate your specified pattern.
+</li></ul></li>
+            </ul>
+            <li>In <b>Host Credential</b>, select or create a credential:</li>
+        </ol>
+        <div class="caution">
+            <img src="../Resources/Images/utilityCaution2.png" class="utilityDiv">
+            </img>
+            <p>If you use the <MadCap:variable name="ALVariables.AgentName" /> for log collection, do not select or create host credentials. 
+         </p>
+        </div>
+        <div class="caution">
+            <img src="../Resources/Images/utilityCaution2.png" class="utilityDiv">
+            </img>
+            <p>To enable log collection with a remote collector installed in a physical appliance used to collect flat-files or Windows event log messages or a remote collector installed in the cloud used to collect S3 log messages, you must provide host credentials.  An expired host credential will stop log collection. Update any host credential changes in the collection policy.
+           </p>
+        </div>
+        <ul MadCap:continue="true">
+            <li>To use an existing credential, keep the default selection: <b>Use an existing credential</b>. Next,  from <b>Existing Credential</b>, select a credential.</li>
+        </ul>
+        <ul MadCap:continue="true">
+            <li>To create a new credential, select <b>Create a new credential</b>. Next, enter new credentials.<ul MadCap:continue="true"><li>In the corresponding configuration fields, type a <b>Credential Name</b>, <b>Host Username</b>, and <b>Host Password</b>. Next, in the <b>Retype Password</b> field, retype the host password.</li></ul></li>
+        </ul>
+        <ol MadCap:continue="true">
+            <li>In <b>Collection Schedule</b>, select or create a collection schedule:</li>
+            <ul>
+                <li>To select a collection schedule, keep the default selection: <b>Use an existing schedule</b>. Next, from <b>Existing schedule</b>,  select a schedule.</li>
+                <li>To create a new collection schedule, select <b>Create a new schedule</b>. Next, enter and select the schedule options.<ul><li>Type a <b>Schedule Name</b>, select a <b>Schedule Time Zone</b>, and select <b>Enabled</b> to enable blackout periods. Also, you can add or remove extra blackout periods.</li></ul></li>
+            </ul>
+            <li>Click <b>Save</b></li>
+        </ol>
+        <h3 class="optional"><a name="Option7"></a>Create syslog collection policy</h3>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />,  from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Policies</b>, click <b>Syslog</b>.</li>
+            <li>In the table of collection policies, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Syslog Policy</b>.</li>
+            <li>In <b>Syslog Policy Name</b>, type a descriptive name. </li>
+            <li>In <b>Syslog Listen Port</b>, type the port where the agent will receive Syslog messages. </li>
+            <li>In <b>Local Syslog Cache Disk Limit (MB)</b>, type the amount of disk space you wish to allow to store Syslog messages. </li>
+            <li>
+                <p>Select a collection schedule.</p>
+                <ul>
+                    <li>Select <b>Use an existing schedule</b>, to use an existing schedule. Then select a schedule from <b>Existing schedule</b>. </li>
+                    <li>Select <b>Create a new schedule</b> to create a new schedule. <b>Then:</b>&#160;<ul><li>In <b>Schedule Name</b>, type a descriptive name.</li><li>In <b>Schedule Time Zone</b>, select a schedule time zone.</li><li>Select <b>Blackout Periods</b> to enable blackout periods. You can add or remove extra blackout periods. </li></ul></li>
+                </ul>
+            </li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h3 class="optional"><a name="Option8"></a>Create Windows Eventlog policy</h3>
+        <ol MadCap:continue="false">
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Policies</b>, click <b>Windows Eventlog</b>.</li>
+            <li>In the table of collection policies, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Eventlog Policy</b>. </li>
+            <li>In <b>Windows Eventlog Policy Name</b>, type a descriptive name.</li>
+            <li>In <b>Host Credential</b>, select or create a credential:<ul><li>To use an existing credential, keep the default selection: <b>Use an existing credential</b>. Next,  from <b>Existing Credential</b>, select a credential.</li><li>To create a new credential, select <b>Create a new credential</b>. Next, enter new credentials.</li></ul><div class="note"><img src="../Resources/Images/utilityNote2.png" class="utilityDiv" /><p>In the corresponding configuration fields, type a <b>Credential Name</b>, <b>Host Username</b>, and <b>Host Password</b>. Next, in the <b>Retype Password</b> field, retype the host password.
+            </p></div></li>
+            <li>In <b>Collection Schedule</b>, select or create a collection schedule:<ul MadCap:continue="true"><li>To select a collection schedule, keep the default selection: <b>Use an existing schedule</b>. Next, from <b>Existing schedule</b>,  select a schedule.</li><li>To create a new collection schedule, select <b>Create a new schedule</b>. Next, enter and select the schedule options.</li></ul><div class="note"><img src="../Resources/Images/utilityNote2.png" class="utilityDiv" /><p>Type a <b>Schedule Name</b>, select a <b>Schedule Time Zone</b>, and select <b>Enabled</b> to enable blackout periods. Also, you can add or remove extra blackout periods.
+            </p></div></li>
+            <li> In <b>Collect All Messages</b>, keep the default selection: <b>Collect All Available Eventlog Streams</b>.</li>
+            <li>To collect specific Windows event log streams, under <b>Alert and Collect on Selected Streams</b>, select your desired streams.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h3 class="optional"><a name="Option9"></a>Create an updates policy</h3>
+        <ol>
+            <li>At the top of the Alert Logic user interface, from the drop-down menu, select <MadCap:variable name="ALVariables.LM" style="font-weight: bold;" />.</li>
+            <li>In the left navigation, under <b>Policies</b>, click <b>Updates</b>.</li>
+            <li>In the table, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Updates</b>. </li>
+            <li>In the <b>Updates  Name</b> field, type a descriptive name.</li>
+            <li>Under <b>Updates Frequency</b>, select one of the following:<ul><li>Automatic</li><li>Scheduled</li><li>Never</li></ul></li>
+            <li style="background-color: #ffffff;">Specify your scan options, and then click <b>Save</b></li>
+        </ol>
+        <h2><a name="Step7"></a>7 Create a collection alert </h2>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Alert Rules</b>, click <b>Collection</b>.</li>
+            <li>In the table of alert rules, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Collection Alert</b>.</li>
+            <li>In <b>Collection Alert Name</b>, type a descriptive name.</li>
+            <li>In <b>Time without logs</b>, type a number value in minutes.</li>
+            <li>In <b>Time Between Alert Occurrences</b>, type a number value in minutes.</li>
+        </ol>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> You cannot specify a number value of more than 3,600.</p>
+        </div>
+        <ol MadCap:continue="true">
+            <li style="font-weight: normal;">In <b>Email Addresses</b>, type an email address. To add multiple email addresses, separate each entry with a comma. </li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Select <b>Send Alert Once</b> to receive alerts only once.</li>
+            <li>Click <b>Save</b></li>
+        </ol>
+        <h2><a name="Step8"></a>8 Apply the collection alert </h2>
+        <p>Once you have created the collection alert, you need to apply this alert to a log source.</p>
+        <p><b>To apply the collection alert to a log source:</b>
+        </p>
+        <ol>
+            <li>In the left navigation, under <b>Collection</b>, click <b>Sources</b>.</li>
+            <li>In <b>Select Some Options</b>, click the empty and select a log source type and then click <b>Apply Filters</b>.</li>
+            <li>In the table of log sources, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />). </li>
+            <li>Select <b>Mass Edit</b>.</li>
+            <li>&#160;In <b>Apply changes to</b>, select <b>All Sources</b>. <ul><li> Select  <b>Only Selected Sources</b> to choose an individual log source from the table.</li></ul></li>
+            <li>&#160;Select your collection alert in <b>Collection Policy</b>.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click <b>Apply</b>.</li>
+        </ol>
+        <h2><a name="Step9"></a>9 Create correlation policy (Optional)</h2>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Policies</b>, click <b>Correlation</b>.</li>
+            <li>In the table of correlation policies, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), and select <b>New Correlation Policy</b>.</li>
+            <li>In <b>Name</b>, type a descriptive name.</li>
+            <li>Select <b>Active</b> to activate this policy. </li>
+            <li>Select <b>Automatically create an incident </b> to automatically create an incident when this policy is triggered.</li>
+            <li>  (Optional) To apply this policy to child customers, select <b>Apply policy to child customers</b>.</li>
+            <li>In the <b>Trigger this policy when there are</b> and <b>messages seen within</b> boxes, type a number value. Then, select a time interval from the drop-down menu. </li>
+            <li>In <b>Message Types</b>, click the empty field and select a listed message type. You can add multiple message types. </li>
+            <li>In <b>Properties and Fields</b>, click the empty field and select a listed property or field. You can add multiple properties and fields. <ul MadCap:continue="true"><li><p>From <b>Correlate by Property or Field Value</b>, select one or more options for from the drop-down menu.</p></li></ul><ul MadCap:continue="true"><li>Click <b>Add condition</b>. Complete the configuration area that appears. (Optional) You can add a condition for each selection in <b>Properties and Fields</b>.</li></ul></li>
+            <li>In the <b>Log Message Template</b> box, type a log message.</li>
+            <li> Select a field value and click <b>Insert Field</b> to insert a field in the log message template. </li>
+            <li>In the empty box, type a descriptive message to correspond to <b>Log Message Template</b>. This message can briefly describe the alert so that users can quickly read the message and understand the problem. </li>
+        </ol>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> Be sure to differentiate the log message template for each correlation policy.</p>
+        </div>
+        <ol MadCap:continue="true">
+            <li> Select <b>Automatically create an Alert</b> to automatically create a correlation alert rule when this policy is triggered.<ul MadCap:continue="true"><li>In <b>Alert Rule Name</b>, type a descriptive name. </li></ul><ul><li>In <b>Time Between Alert Occurrences</b>, type a number value in minutes.</li><li>Select <b>Include message text</b> to enable the message typed in <b>Log Message Template</b> for this template.</li></ul></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h2><a name="Step10"></a>10 Create correlation alert rule (optional)</h2>
+        <ol>
+            <li>At the top of the <MadCap:variable name="ALVariables.ALUI_1" />, from the drop-down menu, select <b>Log Manager</b>.</li>
+            <li>In the left navigation, under <b>Alert Rules</b>, click <b>Correlation</b>.</li>
+            <li>In the  alert rules table, in the <b>Actions</b> column, click the gear icon (<img src="../../../../../../../../Alert Logic Help Project/Content/Resources/Images/gear icon.png" />), select <b>New Correlation Alert Rule</b>.</li>
+            <li>In <b>Name</b>, type a descriptive name.</li>
+            <li>In <b>Time Between Alert Occurrences</b>, type a number value in minutes.</li>
+        </ol>
+        <div class="note">
+            <img src="../Resources/Images/utilityNote2.png" class="utilityDiv" />
+            <p> You cannot specify a number value of more than 3,600.</p>
+        </div>
+        <ol MadCap:continue="true">
+            <li>Select an option for <b>Trigger an alert when the message type is</b>. <ul MadCap:continue="true"><li> To trigger an alert when the message type is in the select message types, select <b>in the selected message types</b>.</li><li> To trigger an alert when the message type is not in the select message types, select <b>NOT in the selected message types</b>.</li></ul></li>
+            <li>Select <b>Include message text</b> to include the message text, and then in <b>Message Types</b>, select one or more options.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

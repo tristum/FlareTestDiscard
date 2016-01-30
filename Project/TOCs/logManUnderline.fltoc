@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Log manager underline"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm"></TocEntry>
+  <TocEntry
+    Title="Before you begin"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Before">
+    <TocEntry
+      Title="Before you begin"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Before"
+      ReplaceMergeNode="false" />
+    <TocEntry
+      Title="System requirements"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#System">
+      <TocEntry
+        Title="System requirements"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#System"></TocEntry>
+      <TocEntry
+        Title="Virtual appliance"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Virtual" />
+      <TocEntry
+        Title="Remote collector"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Remote" />
+      <TocEntry
+        Title="Physical appliance"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Physical" />
+      <TocEntry
+        Title="Multi-tenant appliance"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Multi-te"></TocEntry>
+      <TocEntry
+        Title="Virtual instance without agent"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Virtual2" />
+      <TocEntry
+        Title="The agent for Linux"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#The2"></TocEntry>
+      <TocEntry
+        Title="The agent for Windows"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#The"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Firewall rules"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Log">
+      <TocEntry
+        Title="Firewall rules"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Log"></TocEntry>
+      <TocEntry
+        Title="Appliance inbound"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Applianc" />
+      <TocEntry
+        Title="Appliance outbound"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Applianc2"></TocEntry>
+      <TocEntry
+        Title="Agent or remote collector outbound"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Agent"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Determine appliance needs"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Determin" />
+    <TocEntry
+      Title="Service level commitment"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Service" />
+    <TocEntry
+      Title="Daily review actions"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Daily" />
+    <TocEntry
+      Title="Audit trail"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Audit" />
+    <TocEntry
+      Title="Compliance coverage"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Complian" />
+  </TocEntry>
+  <TocEntry
+    Title="Step 1 Download a virtual appliance"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step"></TocEntry>
+  <TocEntry
+    Title="Step 2 Install virtual appliance"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step2"></TocEntry>
+  <TocEntry
+    Title="Step 3 Download the agent"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step3"></TocEntry>
+  <TocEntry
+    Title="Step 4 Install the agent"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step4">
+    <TocEntry
+      Title="Option 1 Install the agent for Windows"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option">
+      <TocEntry
+        Title="Gui installation"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#1."></TocEntry>
+      <TocEntry
+        Title="Command prompt host mode installation"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#2."></TocEntry>
+      <TocEntry
+        Title="Command prompt autoscaling mode installation"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#3." />
+    </TocEntry>
+    <TocEntry
+      Title="Option 2 Install the Agent for Linux"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option2">
+      <TocEntry
+        Title="Install the agent on RPM-based distributions"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#1.2"></TocEntry>
+      <TocEntry
+        Title="Install the agent on Debian-based distributions"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#2.2"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Option 3 Install the agent for Linux in host mode"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option3">
+      <TocEntry
+        Title="Install the agent on RPM-based distributions"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#1.3"></TocEntry>
+      <TocEntry
+        Title="Install the agent on Debian-based distributions"
+        Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#2.3"></TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Step 5 Configure collection source"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step5">
+    <TocEntry
+      Title="Option 1 Create a Windows Eventlog source"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option4"></TocEntry>
+    <TocEntry
+      Title="Option 2 Create a flat file collection source"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option5"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Step 6 Configure collection policies"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step6">
+    <TocEntry
+      Title="Option 1 Create flat-file policy"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option6"></TocEntry>
+    <TocEntry
+      Title="Option 2 Create syslog collection policy"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option7"></TocEntry>
+    <TocEntry
+      Title="Option 3 Create Windows Eventlog policy"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option8"></TocEntry>
+    <TocEntry
+      Title="Option 4 Create an updates policy"
+      Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Option9"></TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Step 7 Create a collection alert"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step7"></TocEntry>
+  <TocEntry
+    Title="Step 8 Apply the collection alert"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step8"></TocEntry>
+  <TocEntry
+    Title="Step 9 Create correlation policy (Optional)"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step9"></TocEntry>
+  <TocEntry
+    Title="Step 10 Create correlation alert rule (Optional)"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step9"></TocEntry>
+  <TocEntry
+    Title="Step 11 Walk through"
+    Link="/Content/A_Introduction Topics/logManagerBookCompOrage.htm#Step10" />
+</CatapultToc>
